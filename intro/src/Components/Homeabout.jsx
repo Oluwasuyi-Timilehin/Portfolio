@@ -8,7 +8,7 @@ const Homeabout = () => {
   return (
     <>
       <div className="bg-white dark:bg-primary">
-        <div className="container mx-auto py-20 px-4 items-center justify-center flex flex-col space-y-5 lg:px-7 lg:space-x-10 lg:flex-row">
+        <div className="container mx-auto py-40 px-4 items-center justify-center flex flex-col space-y-5 lg:px-7 lg:space-x-10 lg:flex-row">
           <div className="flex flex-col items-center justify-center -space-y-5 lg:w-2/4 xl:w-1/4">
             <img
               className="rounded-full object-cover h-80 w-80"

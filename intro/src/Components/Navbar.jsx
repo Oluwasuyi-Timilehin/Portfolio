@@ -39,7 +39,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white dark:bg-primary py-3 text-primary dark:text-white w-full sticky top-0 z-50">
+      <nav className="bg-white dark:bg-primary py-5 text-primary dark:text-white w-full sticky top-0 z-50">
         <div className="flex items-center px-3 container mx-auto justify-between">
           {/* Logo */}
           <RouterLink to="/" className="text-2xl text-secondary">
@@ -191,11 +191,11 @@ const Navbar = () => {
         <Element>
           <Hero />
         </Element>
-        <Element name="about">
-          <Homeabout />
-        </Element>
         <Element name="skills">
           <Homeskill />
+        </Element>
+        <Element name="about">
+          <Homeabout />
         </Element>
         <Element name="resume">
           <Homeproject />
