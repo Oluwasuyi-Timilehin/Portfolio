@@ -42,7 +42,8 @@ const Navbar = () => {
       <nav className="bg-white dark:bg-primary py-5 text-primary dark:text-white w-full sticky top-0 z-50">
         <div className="flex items-center px-3 container mx-auto justify-between">
           {/* Logo */}
-          <RouterLink to="/" className="text-2xl text-secondary">
+          <RouterLink to="/" className="text-2xl text-secondary flex items-center">
+            <h1>Timicodes</h1>
             <FaCode />
           </RouterLink>
 

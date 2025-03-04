@@ -1,8 +1,8 @@
 import React from "react";
 import { FaInstagram } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
 
@@ -33,15 +33,24 @@ const Hero = () => {
                 to="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin-b474b629a"
                 className=""
               >
-                <FaLinkedin className="text-primary dark:text-white" />
+                <FaLinkedinIn className="text-primary dark:text-white" />
               </Link>
-              <Link to="https://twitter.com/OluwasuyiOlumi3" className="">
+              <Link
+                to="https://twitter.com/OluwasuyiOlumi3"
+                className=""
+              >
                 <FaTwitter className="text-primary dark:text-white" />
               </Link>
-              <button className="">
-                <FaYoutube className="text-primary dark:text-white" />
-              </button>
-              <Link to="https://www.instagram.com/dxrkfacee/" className="">
+              <Link
+                to="https://github.com/Oluwasuyi-Timilehin"
+                className=""
+              >
+                <FaGithub className="text-primary dark:text-white" />
+              </Link>
+              <Link
+                to="https://www.instagram.com/dxrkfacee/"
+                className=""
+              >
                 <FaInstagram className="text-primary dark:text-white" />
               </Link>
             </div>
