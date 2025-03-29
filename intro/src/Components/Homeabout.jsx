@@ -10,12 +10,14 @@ const Homeabout = () => {
       <div className="bg-white dark:bg-primary">
         <div className="container mx-auto py-40 px-4 items-center justify-center flex flex-col space-y-5 lg:px-7 lg:space-x-10 lg:flex-row">
           <div className="flex flex-col items-center justify-center -space-y-5 lg:w-2/4 xl:w-1/4">
+          {/* Profile Image */}
             <img
               className="rounded-full object-cover h-80 w-80"
               src={spiderImg}
               alt=""
             />
-            <div className="border border-slate-500 dark:border-grey bg-white dark:bg-primary w-60 py-3 space-y-1 px-4 text-primary dark:text-white text-center rounded-md">
+            
+            <div className="border border-slate-500 text-center bg-white w-60 py-3 space-y-1 px-4 text-primary rounded-md dark:text-white dark:bg-primary dark:border-grey">
               <p>Oluwasuyi Timilehin</p>
               <div className="flex justify-center px-4 space-x-3">
                 <Link

@@ -28,6 +28,8 @@ const Hero = () => {
               <span className="text-secondary"> Frontend Web Developer </span>
               with 3 years experience creating user friendly websites.
             </p>
+
+            {/* Social Links */}
             <div className="flex space-x-4 text-xl text-white lg:text-2xl">
               <Link
                 to="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin-b474b629a"
@@ -35,25 +37,17 @@ const Hero = () => {
               >
                 <FaLinkedin className="text-primary dark:text-white" />
               </Link>
-              <Link
-                to="https://twitter.com/OluwasuyiOlumi3"
-                className=""
-              >
+              <Link to="https://twitter.com/OluwasuyiOlumi3" className="">
                 <FaTwitter className="text-primary dark:text-white" />
               </Link>
-              <Link
-                to="https://github.com/Oluwasuyi-Timilehin"
-                className=""
-              >
+              <Link to="https://github.com/Oluwasuyi-Timilehin" className="">
                 <FaGithub className="text-primary dark:text-white" />
               </Link>
-              <Link
-                to="https://www.instagram.com/dxrkfacee/"
-                className=""
-              >
+              <Link to="https://www.instagram.com/dxrkfacee/" className="">
                 <FaInstagram className="text-primary dark:text-white" />
               </Link>
             </div>
+            
           </div>
           <div className="lg:w-1/2">
             <img className="mx-auto" src={webImage} />

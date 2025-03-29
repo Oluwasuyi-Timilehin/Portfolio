@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 const Contact = () => {
   return (
     <>
-      <section className="bg-white dark:bg-primary text-primary dark:text-white flex gap-1 flex-col h-screen justify-center items-center md:gap-0 py-5">
+      <section
+        className="bg-white dark:bg-primary text-primary dark:text-white flex gap-1 flex-col h-screen justify-center items-center py-5 md:gap-0"
+      >
         <div className="flex flex-col gap-2 items-center">
           <p className="text-md font-medium text-cinder-light text-primary dark:text-white tracking-widest font-inter">
             MY CONTACT
@@ -20,7 +22,7 @@ const Contact = () => {
             or just want to say hi, I'll definitely get back to you!
           </p>
           <Link to="mailto:oluwasuyitimilehin@gmail.com?subject=Contact from Portfolio&body=Hello Timilehin,">
-            <button className="border border-secondary rounded-md hover:bg-secondary hover:text-white transition-all duration-500 p-2 text-xl font-semibold w-40">
+            <button className="border border-secondary rounded-md hover:bg-secondary hover:text-white transition-all duration-500 p-2 text-xl     font-semibold w-40">
               Say Hello
             </button>
           </Link>
