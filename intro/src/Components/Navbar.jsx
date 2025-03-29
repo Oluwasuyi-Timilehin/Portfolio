@@ -42,7 +42,10 @@ const Navbar = () => {
       <nav className="bg-white dark:bg-primary py-5 text-primary dark:text-white w-full sticky top-0 z-50">
         <div className="flex items-center px-3 container mx-auto justify-between">
           {/* Logo */}
-          <RouterLink to="/" className="text-2xl text-secondary flex items-center">
+          <RouterLink
+            to="/"
+            className="text-2xl text-secondary flex items-center"
+          >
             <h1>Timicodes</h1>
             <FaCode />
           </RouterLink>
@@ -132,7 +135,7 @@ const Navbar = () => {
       <div
         className={`fixed ${
           open ? "block" : "hidden"
-        } bg-white dark:bg-primary text-primary dark:text-white top-12 w-full z-40 lg:hidden h-screen flex flex-col items-center justify-center space-y-16`}
+        } bg-white text-primary top-12 w-full z-40 h-screen flex flex-col items-center justify-center space-y-16 lg:hidden dark:bg-primary dark:text-white`}
       >
         <ScrollLink
           to="about"

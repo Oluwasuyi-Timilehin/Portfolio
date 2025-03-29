@@ -18,6 +18,7 @@ const Homeproject = () => {
             </p>
           </div>
 
+          {/* My Projects */}
           <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-20 lg:items-center">
             <div className="flex flex-col lg:w-1/2">
               <div className="space-y-4 flex flex-col lg:space-y-6 rounded-xl px-3 py-7 bg-slate-200 dark:bg-slate-700 lg:px-5">
