@@ -8,7 +8,7 @@ const Homeproject = () => {
   return (
     <>
       <div className="bg-white dark:bg-primary py-10 text-primary dark:text-white lg:py-20">
-        <div className="container mx-auto space-y-20 px-4 lg:space-y-24">
+        <div className="container mx-auto space-y-16 px-4 lg:space-y-24">
           <div className="flex flex-col space-y-1">
             <p className="text-primary dark:text-white text-sm font-medium">
               MY PROJECT
@@ -19,7 +19,7 @@ const Homeproject = () => {
           </div>
 
           {/* My Projects */}
-          <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-20 lg:items-center">
+          <div className="flex flex-col space-y-7 lg:space-y-0 lg:flex-row lg:space-x-20 lg:items-center">
             <div className="flex flex-col lg:w-1/2">
               <div className="space-y-4 flex flex-col lg:space-y-6 rounded-xl px-3 py-7 bg-slate-200 dark:bg-slate-700 lg:px-5">
                 <div className="flex justify-between items-center">
@@ -83,7 +83,7 @@ const Homeproject = () => {
             />
           </div>
 
-          <div className="flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-20 lg:items-center">
+          <div className="flex flex-col space-y-7 lg:space-y-0 lg:flex-row lg:space-x-20 lg:items-center">
             <div className="flex flex-col lg:w-1/2">
               <div className="space-y-4 flex flex-col lg:space-y-6 rounded-xl px-3 py-7 bg-slate-200 dark:bg-slate-700 lg:px-5">
                 <div className="flex flex-col">
