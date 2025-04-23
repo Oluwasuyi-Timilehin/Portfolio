@@ -58,7 +58,7 @@ const Navbar = () => {
           {/* Logo */}
           <RouterLink
             to="/"
-            className="text-2xl font-extrabold text-secondary flex items-center"
+            className="text-2xl font-bold text-secondary flex items-center"
           >
             <h1>Timicodes</h1>
             <FaCode />
