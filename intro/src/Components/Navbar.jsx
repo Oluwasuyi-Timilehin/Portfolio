@@ -14,6 +14,7 @@ import Footer from "./Footer";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
@@ -30,6 +31,14 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -39,12 +48,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white dark:bg-primary py-5 text-primary dark:text-white w-full sticky top-0 z-50">
+      {/* Navigation */}
+      <nav
+        className={`w-full sticky z-50 transition-all duration-300 text-primary dark:bg-primary  dark:text-white ${
+          scrolled ? "py-3 bg-white shadow-lg top-0" : "py-5 bg-white"
+        }`}
+      >
         <div className="flex items-center px-3 container mx-auto justify-between">
           {/* Logo */}
           <RouterLink
             to="/"
-            className="text-2xl text-secondary flex items-center"
+            className="text-2xl font-extrabold text-secondary flex items-center"
           >
             <h1>Timicodes</h1>
             <FaCode />
@@ -58,9 +72,9 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer transition-all duration-500"
+              className="cursor-pointer transition-all duration-500 text-gray-800"
             >
-              ABOUT
+              About
             </ScrollLink>
             <ScrollLink
               to="skills"
@@ -68,9 +82,9 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer transition-all duration-500"
+              className="cursor-pointer transition-all duration-500 text-gray-800"
             >
-              SKILLS
+              Skills
             </ScrollLink>
             <ScrollLink
               to="resume"
@@ -78,9 +92,9 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer transition-all duration-500"
+              className="cursor-pointer transition-all duration-500 text-gray-800"
             >
-              PROJECT
+              Project
             </ScrollLink>
             <ScrollLink
               to="contact"
@@ -88,14 +102,15 @@ const Navbar = () => {
               smooth={true}
               offset={-70}
               duration={500}
-              className="cursor-pointer transition-all duration-500"
+              className="cursor-pointer transition-all duration-500 text-gray-800"
             >
-              CONTACT
+              Contact
             </ScrollLink>
             <a
               href="/Oluwasuyi OluwatimilehinCV.pdf"
               download
-              className="border py-1.5 px-3 border-secondary rounded-md transition-all duration-500 hover:bg-secondary hover:text-white"
+              className="border py-1.5 px-4 text-gray-800 border-secondary rounded-md transition-all duration-500 hover:bg-secondary
+               hover:text-white"
             >
               Resume
             </a>
@@ -184,7 +199,8 @@ const Navbar = () => {
         <a
           href="/Oluwasuyi OluwatimilehinCV.pdf"
           download
-          className="border p-3 text-xl font-semibold border-secondary rounded-md transition-all duration-500 hover:bg-secondary hover:text-white"
+          className="border p-3 text-xl font-semibold border-secondary rounded-md transition-all duration-500 hover:bg-secondary
+           hover:text-white"
         >
           Resume
         </a>
