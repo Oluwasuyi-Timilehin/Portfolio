@@ -4,7 +4,8 @@ import { Link as ScrollLink, Element } from "react-scroll";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FaCode } from "react-icons/fa6";
 import { IoIosClose } from "react-icons/io";
-import { BsSun, BsMoon } from "react-icons/bs"; // Icons for light and dark mode
+import { LuMoon, LuSun } from "react-icons/lu";
+import { FiMail } from "react-icons/fi";
 import Homeabout from "./Homeabout";
 import Hero from "./Hero";
 import Homeskill from "./Homeskill";
@@ -21,6 +22,8 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setOpen(!open);
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = open ? "auto" : "hidden";
   };
 
   const toggleDarkMode = () => {
@@ -39,6 +42,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
+    // Set initial theme
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -46,100 +50,142 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
+  // Close mobile menu when clicking a link
+  const closeMobileMenu = () => {
+    setOpen(false);
+    document.body.style.overflow = "auto";
+  };
+
   return (
     <>
       {/* Navigation */}
       <nav
-        className={`w-full sticky z-50 transition-all duration-300 text-primary dark:bg-primary  dark:text-white ${
-          scrolled ? "py-3 bg-white shadow-lg top-0" : "py-5 bg-white"
+        className={`w-full fixed z-50 transition-all duration-300 border-b dark:border-zinc-800 ${
+          darkMode ? "dark:bg-zinc-900" : "bg-white"
+        } ${
+          scrolled
+            ? "py-4 shadow-lg backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90"
+            : "py-5"
         }`}
       >
-        <div className="flex items-center px-3 container mx-auto justify-between">
+        <div className="flex items-center px-4 sm:px-6 lg:px-8 justify-between">
           {/* Logo */}
           <RouterLink
             to="/"
-            className="text-2xl font-bold text-secondary flex items-center"
+            className="text-2xl font-bold flex items-center gap-2 group"
           >
-            <h1>Timicodes</h1>
-            <FaCode />
+            <span className="text-secondary">Timicodes</span>
+            <FaCode className="text-secondary" />
           </RouterLink>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-10 font-semibold">
-            <ScrollLink
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="cursor-pointer transition-all duration-500 text-gray-800"
-            >
-              About
-            </ScrollLink>
-            <ScrollLink
-              to="skills"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="cursor-pointer transition-all duration-500 text-gray-800"
-            >
-              Skills
-            </ScrollLink>
-            <ScrollLink
-              to="resume"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="cursor-pointer transition-all duration-500 text-gray-800"
-            >
-              Project
-            </ScrollLink>
-            <ScrollLink
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="cursor-pointer transition-all duration-500 text-gray-800"
-            >
-              Contact
-            </ScrollLink>
-            <a
-              href="/Oluwasuyi OluwatimilehinCV.pdf"
-              download
-              className="border py-1.5 px-4 text-gray-800 border-secondary rounded-md transition-all duration-500 hover:bg-secondary
-               hover:text-white"
-            >
-              Resume
-            </a>
-            {/* Dark Mode Toggle for Large Screens */}
+          <div className="hidden lg:flex lg:items-center lg:gap-8 font-medium">
+            <div className="flex items-center gap-8">
+              <ScrollLink
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                activeClass="text-secondary"
+              >
+                Home
+              </ScrollLink>
+              <ScrollLink
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                activeClass="text-secondary"
+              >
+                About
+              </ScrollLink>
+              <ScrollLink
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                activeClass="text-secondary"
+              >
+                Skills
+              </ScrollLink>
+              <ScrollLink
+                to="resume"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                activeClass="text-secondary"
+              >
+                Projects
+              </ScrollLink>
+              <ScrollLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                activeClass="text-secondary"
+              >
+                Contact
+              </ScrollLink>
+            </div>
+
+            {/* <div className="flex items-center gap-4 ml-4 border-l pl-4 border-gray-200 dark:border-gray-700">
+              <a
+                href="/Oluwasuyi OluwatimilehinCV.pdf"
+                download
+                className="px-4 py-2 bg-secondary text-white rounded-md transition-all duration-300"
+              >
+                Resume
+              </a>
+              
+            </div> */}
+            {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
-              className="text-secondary text-xl"
+              className="text-zinc-600 dark:text-zinc-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 "
               aria-label="Toggle Dark Mode"
             >
-              {darkMode ? <BsSun /> : <BsMoon />}
+              {darkMode ? (
+                <LuSun className="text-md" />
+              ) : (
+                <LuMoon className="text-md" />
+              )}
             </button>
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="flex items-center lg:hidden space-x-5">
+          <div className="flex items-center lg:hidden gap-4">
             {/* Dark Mode Toggle for Mobile */}
             <button
               onClick={toggleDarkMode}
-              className="text-secondary text-xl"
+              className="text-zinc-600 dark:text-zinc-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700"
               aria-label="Toggle Dark Mode"
             >
-              {darkMode ? <BsSun /> : <BsMoon />}
+              {darkMode ? (
+                <LuSun className="text-md" />
+              ) : (
+                <LuMoon className="text-md" />
+              )}
             </button>
             {/* Hamburger Menu */}
-            <button onClick={toggleMenu} className="text-secondary">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-700 dark:text-gray-300 hover:text-secondary"
+              aria-label="Toggle Menu"
+            >
               {open ? (
-                <IoIosClose fontSize="25" />
+                <IoIosClose className="text-md" />
               ) : (
-                <AiOutlineMenu fontSize="25" />
+                <AiOutlineMenu className="text-md" />
               )}
             </button>
           </div>
@@ -148,74 +194,85 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed ${
-          open ? "block" : "hidden"
-        } bg-white text-primary top-12 w-full z-40 h-screen flex flex-col items-center justify-center space-y-16 lg:hidden dark:bg-primary dark:text-white`}
+        className={`fixed inset-0 z-40 transition-all duration-300 ease-in-out ${
+          open
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 -translate-y-full pointer-events-none"
+        } bg-white dark:bg-gray-900 pt-24 flex flex-col items-center justify-start lg:hidden`}
       >
-        <ScrollLink
-          to="about"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="cursor-pointer transition-all duration-500 text-xl font-semibold"
-          onClick={toggleMenu}
-        >
-          ABOUT
-        </ScrollLink>
-        <ScrollLink
-          to="skills"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="cursor-pointer transition-all duration-500 text-xl font-semibold"
-          onClick={toggleMenu}
-        >
-          SKILLS
-        </ScrollLink>
-        <ScrollLink
-          to="resume"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="cursor-pointer transition-all duration-500 text-xl font-semibold"
-          onClick={toggleMenu}
-        >
-          PROJECT
-        </ScrollLink>
-        <ScrollLink
-          to="contact"
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="cursor-pointer transition-all duration-500 text-xl font-semibold"
-          onClick={toggleMenu}
-        >
-          CONTACT
-        </ScrollLink>
-        <a
-          href="/Oluwasuyi OluwatimilehinCV.pdf"
-          download
-          className="border p-3 text-xl font-semibold border-secondary rounded-md transition-all duration-500 hover:bg-secondary
-           hover:text-white"
-        >
-          Resume
-        </a>
+        <div className="w-full px-6 flex flex-col items-center gap-8">
+          <ScrollLink
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
+            activeClass="text-secondary font-semibold"
+            onClick={closeMobileMenu}
+          >
+            About
+          </ScrollLink>
+          <ScrollLink
+            to="skills"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
+            activeClass="text-secondary font-semibold"
+            onClick={closeMobileMenu}
+          >
+            Skills
+          </ScrollLink>
+          <ScrollLink
+            to="resume"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
+            activeClass="text-secondary font-semibold"
+            onClick={closeMobileMenu}
+          >
+            Projects
+          </ScrollLink>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
+            activeClass="text-secondary font-semibold"
+            onClick={closeMobileMenu}
+          >
+            Contact
+          </ScrollLink>
+
+          {/* <div className="flex flex-col items-center gap-6 w-full mt-8">
+            <a
+              href="/Oluwasuyi OluwatimilehinCV.pdf"
+              download
+              className="w-full max-w-xs px-6 py-3 bg-secondary text-white rounded-md transition-all duration-300 text-center"
+              onClick={closeMobileMenu}
+            >
+              Download Resume
+            </a>
+          </div> */}
+        </div>
       </div>
 
       {/* Page Content */}
-      <div>
-        <Element>
+      <div className="pt-16">
+        <Element name="home">
           <Hero />
-        </Element>
-        <Element name="skills">
-          <Homeskill />
         </Element>
         <Element name="about">
           <Homeabout />
+        </Element>
+        <Element name="skills">
+          <Homeskill />
         </Element>
         <Element name="resume">
           <Homeproject />
