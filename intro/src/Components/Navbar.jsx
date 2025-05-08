@@ -151,7 +151,7 @@ const Navbar = () => {
             {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
-              className="text-zinc-600 dark:text-zinc-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 "
+              className="text-zinc-600 dark:text-zinc-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700"
               aria-label="Toggle Dark Mode"
             >
               {darkMode ? (
@@ -179,7 +179,7 @@ const Navbar = () => {
             {/* Hamburger Menu */}
             <button
               onClick={toggleMenu}
-              className="text-gray-700 dark:text-gray-300 hover:text-secondary"
+              className="text-gray-700 dark:text-gray-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700"
               aria-label="Toggle Menu"
             >
               {open ? (
