@@ -79,7 +79,7 @@ const Navbar = () => {
           </RouterLink>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex lg:items-center lg:gap-8 font-medium">
+          <div className="hidden lg:flex lg:items-center lg:gap-8">
             <div className="flex items-center gap-8">
               <ScrollLink
                 to="home"
@@ -179,7 +179,7 @@ const Navbar = () => {
             {/* Hamburger Menu */}
             <button
               onClick={toggleMenu}
-              className="text-gray-700 dark:text-gray-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700"
+              className="text-zinc-600 dark:text-zinc-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700"
               aria-label="Toggle Menu"
             >
               {open ? (
@@ -194,21 +194,32 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 z-40 transition-all duration-300 ease-in-out ${
+        className={`absolute h-[45vh] w-full z-40 shadow-lg transition-all duration-300 ease-in-out ${
           open
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-full pointer-events-none"
-        } bg-white dark:bg-gray-900 pt-24 flex flex-col items-center justify-start lg:hidden`}
+        } bg-white dark:bg-zinc-700 pt-24 flex flex-col items-center justify-start lg:hidden`}
       >
         <div className="w-full px-6 flex flex-col items-center gap-8">
+          <ScrollLink
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+            activeClass="text-secondary"
+          >
+            Home
+          </ScrollLink>
           <ScrollLink
             to="about"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
-            activeClass="text-secondary font-semibold"
+            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+            activeClass="text-secondary"
             onClick={closeMobileMenu}
           >
             About
@@ -219,8 +230,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
-            activeClass="text-secondary font-semibold"
+            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+            activeClass="text-secondary"
             onClick={closeMobileMenu}
           >
             Skills
@@ -231,8 +242,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
-            activeClass="text-secondary font-semibold"
+            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+            activeClass="text-secondary"
             onClick={closeMobileMenu}
           >
             Projects
@@ -243,8 +254,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full text-center py-4 text-xl font-medium border-b border-gray-200 dark:border-gray-700 cursor-pointer transition-all duration-300 hover:text-secondary"
-            activeClass="text-secondary font-semibold"
+            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+            activeClass="text-secondary"
             onClick={closeMobileMenu}
           >
             Contact
