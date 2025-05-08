@@ -74,8 +74,8 @@ const Navbar = () => {
             to="/"
             className="text-2xl font-bold flex items-center gap-2 group"
           >
-            <span className="text-secondary">Timicodes</span>
-            <FaCode className="text-secondary" />
+            <span className="text-emerald-600">Timicodes</span>
+            <FaCode className="text-emerald-600" />
           </RouterLink>
 
           {/* Desktop Menu */}
@@ -260,22 +260,11 @@ const Navbar = () => {
           >
             Contact
           </ScrollLink>
-
-          {/* <div className="flex flex-col items-center gap-6 w-full mt-8">
-            <a
-              href="/Oluwasuyi OluwatimilehinCV.pdf"
-              download
-              className="w-full max-w-xs px-6 py-3 bg-secondary text-white rounded-md transition-all duration-300 text-center"
-              onClick={closeMobileMenu}
-            >
-              Download Resume
-            </a>
-          </div> */}
         </div>
       </div>
 
       {/* Page Content */}
-      <div className="pt-16">
+      <div className="">
         <Element name="home">
           <Hero />
         </Element>
