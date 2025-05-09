@@ -1,7 +1,7 @@
 const Homeabout = () => {
   return (
     <>
-      <div className="bg-zinc-50 dark:bg-zinc-900">
+      <section className="bg-zinc-50 dark:bg-zinc-900">
         <div className="container mx-auto py-20 px-4 lg:px-7 lg:py-28">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Content Section */}
@@ -97,7 +97,7 @@ const Homeabout = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

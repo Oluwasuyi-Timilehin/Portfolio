@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import webImage from "/Images/avater1.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Hero = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const scrollToProjects = (e) => {
     e.preventDefault();
     const projectsSection = document.getElementById("projects");
@@ -22,12 +28,12 @@ const Hero = () => {
         <div className="absolute top-1/2 left-1/3 w-6 h-6 rounded-lg bg-emerald-500/20 dark:bg-emerald-400/20 animate-float4"></div>
         <div className="absolute bottom-1/3 left-1/5 w-14 h-14 rounded-full bg-emerald-500/10 dark:bg-emerald-400/10 animate-float5"></div>
 
-        {/* Grid pattern (subtle) */}
+        {/* Grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 dark:opacity-10"></div>
 
         <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="flex-1 space-y-6">
+            <div className="flex-1 space-y-6" data-aos="fade-right">
               <h1 className="text-zinc-900 text-4xl font-semibold md:text-5xl lg:text-6xl dark:text-white">
                 Hello, I'm{" "}
                 <span className="text-emerald-600">
@@ -83,7 +89,10 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-            <div className="flex-1 flex justify-center relative">
+            <div
+              className="flex-1 flex justify-center relative"
+              data-aos="fade-left"
+            >
               <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-emerald-500/70 dark:border-emerald-500 overflow-hidden z-10">
                 <img
                   alt="Oluwasuyi Oluwatimilehin"
