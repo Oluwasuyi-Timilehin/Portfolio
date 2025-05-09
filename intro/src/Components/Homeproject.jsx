@@ -1,134 +1,123 @@
-import React from "react";
-import { FaGithub } from "react-icons/fa";
+
+import { LuGithub, LuExternalLink } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import fastImg from "/Images/fastcare.png";
 import spiderImg from "/Images/movieapp.png";
 
 const Homeproject = () => {
-  return (
-    <>
-      <section  id="projects" className="bg-zinc-50 dark:bg-zinc-900 py-10 text-primary dark:text-white lg:py-20">
-        <div className="container mx-auto space-y-16 px-4 lg:space-y-24">
-          <div className="flex flex-col space-y-1">
-            <p className="text-primary dark:text-white text-sm font-medium">
-              MY PROJECT
-            </p>
-            <p className="text-2xl font-semibold lg:text-3xl">
-              What <span className="text-secondary">i have built</span>
-            </p>
-          </div>
+  const projects = [
+    {
+      title: "Movie App",
+      description:
+        "A React application that allows users to discover new films effortlessly, featuring search functionality and curated top movie lists.",
+      technologies: ["React.js", "Tailwind CSS"],
+      githubLink: "https://github.com/Oluwasuyi-Timilehin/Movieapp",
+      liveLink: "https://movieapp-fawn-one.vercel.app/",
+      image: spiderImg,
+      type: "Personal Project",
+    },
+    {
+      title: "Fast Care",
+      description:
+        "Emergency medical application designed for quick access to medical units, ensuring swift connection to emergency assistance.",
+      technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+      githubLink: "https://github.com/Zino234/FastCare",
+      image: fastImg,
+      type: "Personal Project",
+    },
+  ];
 
-          {/* My Projects */}
-          <div className="flex flex-col space-y-7 lg:space-y-0 lg:flex-row lg:space-x-20 lg:items-center">
-            <div className="flex flex-col lg:w-1/2">
-              <div className="space-y-4 flex flex-col lg:space-y-6 rounded-xl px-3 py-7 bg-slate-200 dark:bg-slate-700 lg:px-5">
-                <div className="flex justify-between items-center">
-                  <div className="flex flex-col">
-                    <div className="flex items-center space-x-3">
-                      <p className="text-secondary text-3xl font-bold">
-                        Movie App
-                      </p>
-                      <Link
-                        className="text-xl"
-                        to="https://github.com/Oluwasuyi-Timilehin/Movieapp"
-                      >
-                        <FaGithub />
-                      </Link>
-                    </div>
-                    <p className="text-slate-500 dark:text-slate-300 font-semibold text-xl">
-                      Personal Project
-                    </p>
-                  </div>
-                  <div className="hidden md:flex">
-                    <Link
-                      to="https://movieapp-fawn-one.vercel.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-secondary px-3 py-1 rounded-md font-medium"
-                    >
-                      View Live
-                    </Link>
-                  </div>
-                </div>
-                <div className="flex flex-row space-x-4">
-                  <div className="bg-secondary font-medium px-3 py-1 rounded-md">
-                    React.Js
-                  </div>
-                  <div className="bg-secondary font-medium px-3 py-1 rounded-md">
-                    Tailwind css
-                  </div>
-                </div>
-                <p className="text-primary dark:text-white text-left lg:text-justify leading-relaxed">
-                  This movie app allows users to discover new films
-                  effortlessly, featuring a search function and a curated list
-                  of the top 20 movies. It offers an easy and enjoyable way to
-                  explore and expand your cinematic horizons.
+  return (
+    <section
+      id="projects"
+      className="bg-zinc-50 dark:bg-zinc-900 py-16 lg:py-24"
+    >
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-semibold text-zinc-800 dark:text-white mb-4">
+            Featured Projects
+          </h2>
+          <div class="w-20 h-1 bg-emerald-600 mx-auto mb-6"></div>
+          <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+            Here are some of my recent projects that showcase my skills and
+            development approach.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="rounded-lg bg-white dark:bg-zinc-800/50 h-full overflow-hidden shadow-md hover:shadow-lg transition-shadow"
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  src={project.image}
+                />
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-xl font-medium text-zinc-900 dark:text-white mb-2">
+                  {project.title}
+                </h3>
+
+                <p className="text-zinc-600 dark:text-zinc-300 mb-4 line-clamp-3">
+                  {project.description}
                 </p>
-                <div className="flex md:hidden justify-end">
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-emerald-100 text-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex space-x-3">
                   <Link
-                    to="https://movieapp-fawn-one.vercel.app/"
+                    to={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-secondary px-3 py-1 rounded-md text-center font-medium"
+                    className="justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background hover:text-accent-foreground h-9 rounded-md px-3 flex items-center gap-1 border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-950"
                   >
-                    View Live
+                    <LuGithub className="h-4 w-4" />
+                    <span>Code</span>
                   </Link>
-                </div>
-              </div>
-            </div>
 
-            <img
-              src={spiderImg}
-              className="rounded-sm mx-auto w-full h-40 lg:h-80 lg:w-1/2 object-cover"
-            />
-          </div>
-
-          <div className="flex flex-col space-y-7 lg:space-y-0 lg:flex-row lg:space-x-20 lg:items-center">
-            <div className="flex flex-col lg:w-1/2">
-              <div className="space-y-4 flex flex-col lg:space-y-6 rounded-xl px-3 py-7 bg-slate-200 dark:bg-slate-700 lg:px-5">
-                <div className="flex flex-col">
-                  <div className="flex items-center space-x-3">
-                    <p className="text-secondary text-3xl font-bold">
-                      Fast Care
-                    </p>
+                  {project.liveLink && (
                     <Link
-                      className="text-xl"
-                      to="https://github.com/Zino234/FastCare"
+                      to={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3 flex items-center gap-1 bg-emerald-600 hover:bg-emerald-700 text-white"
                     >
-                      <FaGithub />
+                      <LuExternalLink className="h-4 w-4" />
+                      <span>Demo</span>
                     </Link>
-                  </div>
-                  <p className="text-slate-500 dark:text-slate-300 font-semibold text-xl">
-                    Personal Project
-                  </p>
+                  )}
                 </div>
-                <div className="flex flex-row space-x-4">
-                  <div className="bg-secondary font-medium px-3 py-1 rounded-md">
-                    Html
-                  </div>
-                  <div className="bg-secondary font-medium px-3 py-1 rounded-md">
-                    Tailwind
-                  </div>
-                  <div className="bg-secondary font-medium px-3 py-1 rounded-md">
-                    Javascript
-                  </div>
-                </div>
-                <p className="text-primary dark:text-white text-left lg:text-justify leading-relaxed">
-                  Fast Care is an application designed for emergency situations,
-                  enabling users to quickly contact medical units. It ensures
-                  swift and efficient access to emergency medical assistance.
-                </p>
               </div>
             </div>
-
-            <img
-              src={fastImg}
-              className="rounded-sm mx-auto w-full h-40 lg:h-80 lg:w-1/2 object-cover"
-            />
-          </div>
+          ))}
         </div>
-      </section>
-    </>
+
+        <div className="text-center mt-12">
+          <Link
+            to="https://github.com/Oluwasuyi-Timilehin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 dark:hover:text-white h-10 rounded-md px-6 py-2"
+          >
+            View All Projects
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 };
 
