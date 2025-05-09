@@ -1,9 +1,6 @@
 import React from "react";
 import { FaInstagram } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-
+import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import webImage from "/Images/avater1.png";
 
 const Hero = () => {
@@ -14,10 +11,21 @@ const Hero = () => {
       projectsSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+
   return (
     <>
-      <section className="bg-white dark:bg-zinc-950 pt-28 pb-20 md:pt-36 md:pb-32 ">
-        <div className="container mx-auto px-6 md:px-8 lg:px-12">
+      <section className="bg-white dark:bg-zinc-950 pt-28 pb-20 md:pt-36 md:pb-32 relative overflow-hidden">
+        {/* Floating animated elements */}
+        <div className="absolute top-1/4 left-1/4 w-8 h-8 rounded-full bg-emerald-500/10 dark:bg-emerald-400/10 animate-float1"></div>
+        <div className="absolute top-1/3 right-1/4 w-12 h-12 rounded-lg bg-emerald-500/15 dark:bg-emerald-400/15 animate-float2"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-10 h-10 rounded-full bg-emerald-500/10 dark:bg-emerald-400/10 animate-float3"></div>
+        <div className="absolute top-1/2 left-1/3 w-6 h-6 rounded-lg bg-emerald-500/20 dark:bg-emerald-400/20 animate-float4"></div>
+        <div className="absolute bottom-1/3 left-1/5 w-14 h-14 rounded-full bg-emerald-500/10 dark:bg-emerald-400/10 animate-float5"></div>
+
+        {/* Grid pattern (subtle) */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 dark:opacity-10"></div>
+
+        <div className="container mx-auto px-6 md:px-8 lg:px-12 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1 space-y-6">
               <h1 className="text-zinc-900 text-4xl font-semibold md:text-5xl lg:text-6xl dark:text-white">
@@ -75,19 +83,20 @@ const Hero = () => {
                 </a>
               </div>
             </div>
-            <div className="flex-1 flex justify-center">
-              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-emerald-500/70 dark:border-emerald-500 overflow-hidden">
+            <div className="flex-1 flex justify-center relative">
+              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full border-4 border-emerald-500/70 dark:border-emerald-500 overflow-hidden z-10">
                 <img
                   alt="Oluwasuyi Oluwatimilehin"
-                  className="w-full h-full object-cover  rounded-full"
+                  className="w-full h-full object-cover rounded-full"
                   src={webImage}
                   style={{
                     objectPosition: "top center",
-                    transform: "scale(1.0)", // Adjust this value as needed
+                    transform: "scale(1.0)",
                   }}
                 />
-                <div className="absolute inset-1 rounded-full flex items-center justify-center overflow-hidden"></div>
               </div>
+              {/* Glow effect behind the image */}
+              <div className="absolute inset-0 rounded-full bg-emerald-500/20 dark:bg-emerald-400/20 blur-3xl w-72 h-72 md:w-96 md:h-96 -z-10"></div>
             </div>
           </div>
         </div>

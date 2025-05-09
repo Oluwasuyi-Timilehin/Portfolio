@@ -2,7 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+.active {
+  color: #f5eeee;
+}
 
-.active{
-    color: #f5eeee;
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(10px, 15px) rotate(5deg);
+  }
+}
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-15px, 10px) rotate(-5deg);
+  }
+}
+@keyframes float3 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(5px, -10px) rotate(3deg);
+  }
+}
+@keyframes float4 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-5px, 5px) rotate(-3deg);
+  }
+}
+@keyframes float5 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(15px, -5px) rotate(5deg);
+  }
+}
+.animate-float1 {
+  animation: float1 8s ease-in-out infinite;
+}
+.animate-float2 {
+  animation: float2 10s ease-in-out infinite;
+}
+.animate-float3 {
+  animation: float3 12s ease-in-out infinite;
+}
+.animate-float4 {
+  animation: float4 9s ease-in-out infinite;
+}
+.animate-float5 {
+  animation: float5 11s ease-in-out infinite;
 }
