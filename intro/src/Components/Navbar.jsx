@@ -138,16 +138,6 @@ const Navbar = () => {
               </ScrollLink>
             </div>
 
-            {/* <div className="flex items-center gap-4 ml-4 border-l pl-4 border-gray-200 dark:border-gray-700">
-              <a
-                href="/Oluwasuyi OluwatimilehinCV.pdf"
-                download
-                className="px-4 py-2 bg-secondary text-white rounded-md transition-all duration-300"
-              >
-                Resume
-              </a>
-              
-            </div> */}
             {/* Dark mode toggle */}
             <button
               onClick={toggleDarkMode}
@@ -179,7 +169,7 @@ const Navbar = () => {
             {/* Hamburger Menu */}
             <button
               onClick={toggleMenu}
-              className="text-zinc-600 dark:text-zinc-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700"
+              className="text-zinc-600 dark:text-zinc-300 rounded-full p-2 transition-all duration-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-950"
               aria-label="Toggle Menu"
             >
               {open ? (
@@ -194,21 +184,21 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`absolute h-[45vh] w-full z-40 shadow-lg transition-all duration-300 ease-in-out ${
+        className={`fixed top-16 left-0 h-[330px] w-full z-40 shadow-lg transition-all duration-300 ease-in-out ${
           open
             ? "opacity-100 translate-y-0"
             : "opacity-0 -translate-y-full pointer-events-none"
-        } bg-white dark:bg-zinc-700 pt-24 flex flex-col items-center justify-start lg:hidden`}
+        } bg-white dark:bg-zinc-900 border-b dark:border-zinc-800 shadow-lg flex flex-col items-center justify-start lg:hidden`}
       >
-        <div className="w-full px-6 flex flex-col items-center gap-8">
+        <div className="w-full px-6 flex flex-col items-center gap-4 py-6">
           <ScrollLink
             to="home"
             spy={true}
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
-            activeClass="text-secondary"
+            className="w-full text-left text-lg text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors py-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            activeClass="text-emerald-600 dark:text-emerald-500"
           >
             Home
           </ScrollLink>
@@ -218,8 +208,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
-            activeClass="text-secondary"
+            className="w-full text-left text-lg text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors py-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            activeClass="text-emerald-600 dark:text-emerald-500"
             onClick={closeMobileMenu}
           >
             About
@@ -230,8 +220,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
-            activeClass="text-secondary"
+            className="w-full text-left text-lg text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors py-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            activeClass="text-emerald-600 dark:text-emerald-500"
             onClick={closeMobileMenu}
           >
             Skills
@@ -242,8 +232,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
-            activeClass="text-secondary"
+            className="w-full text-left text-lg text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors py-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            activeClass="text-emerald-600 dark:text-emerald-500"
             onClick={closeMobileMenu}
           >
             Projects
@@ -254,8 +244,8 @@ const Navbar = () => {
             smooth={true}
             offset={-70}
             duration={500}
-            className="w-full cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
-            activeClass="text-secondary"
+            className="w-full text-left text-lg text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors py-2 rounded-md hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            activeClass="text-emerald-600 dark:text-emerald-500"
             onClick={closeMobileMenu}
           >
             Contact
