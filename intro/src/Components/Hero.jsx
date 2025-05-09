@@ -29,7 +29,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="flex-1 space-y-6">
               <h1 className="text-zinc-900 text-4xl font-semibold md:text-5xl lg:text-6xl dark:text-white">
-                Hi, I'm{" "}
+                Hello, I'm{" "}
                 <span className="text-emerald-600">
                   Oluwasuyi Oluwatimilehin
                 </span>
