@@ -82,7 +82,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-400 transition-all"
                     placeholder="John Doe"
                   />
                 </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-400 transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -111,7 +111,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-400 transition-all"
                   placeholder="Let me know how I can help you"
                 />
               </div>
@@ -125,7 +125,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows="5"
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none focus:border-emerald-400 transition-all"
                   placeholder="Hi Timilehin, I'd like to talk about..."
                 ></textarea>
               </div>
