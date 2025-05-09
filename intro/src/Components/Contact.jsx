@@ -7,7 +7,9 @@ const Contact = () => {
       <div className="container mx-auto px-4 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900 dark:text-white mb-4">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900 dark:text-white mb-4">
+            Get In Touch
+          </h2>
 
           <p className="max-w-3xl mx-auto text-lg text-zinc-600 dark:text-zinc-300">
             Have a project in mind, want to collaborate? Feel free to reach out!
@@ -80,7 +82,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
                     placeholder="John Doe"
                   />
                 </div>
@@ -94,7 +96,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -109,7 +111,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
                   placeholder="Let me know how I can help you"
                 />
               </div>
@@ -123,7 +125,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows="5"
-                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all"
+                  className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none focus:border-transparent transition-all"
                   placeholder="Hi Timilehin, I'd like to talk about..."
                 ></textarea>
               </div>

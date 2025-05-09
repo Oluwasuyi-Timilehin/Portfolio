@@ -38,7 +38,7 @@ const Homeproject = () => {
             Featured Projects
           </h2>
           <div class="w-20 h-1 bg-emerald-600 mx-auto mb-6"></div>
-          <p className="text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
+          <p className="text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and
             development approach.
           </p>
