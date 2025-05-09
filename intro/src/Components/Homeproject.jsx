@@ -7,7 +7,7 @@ import spiderImg from "/Images/movieapp.png";
 const Homeproject = () => {
   return (
     <>
-      <section  id="projects" className="bg-white dark:bg-primary py-10 text-primary dark:text-white lg:py-20">
+      <section  id="projects" className="bg-zinc-50 dark:bg-zinc-900 py-10 text-primary dark:text-white lg:py-20">
         <div className="container mx-auto space-y-16 px-4 lg:space-y-24">
           <div className="flex flex-col space-y-1">
             <p className="text-primary dark:text-white text-sm font-medium">

@@ -1,68 +1,75 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
-import { FaLinkedin, FaGithub, FaInstagram, FaTwitter } from "react-icons/fa";
-import { MdOutlineMail } from "react-icons/md";
+import {
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaTwitter,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const Footer = () => {
-  const [open, setOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setOpen(!open);
-  };
-
   return (
-    <footer className="bg-white dark:bg-primary text-primary dark:text-white py-10">
+    <footer className="bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 py-12 border-t border-zinc-200 dark:border-zinc-800">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row md:justify-between md:items-start md:space-x-10">
-          <div className="flex flex-col lg:space-y-5 mb-10">
-            <div className=" md:text-left mb-6 md:mb-0 max-w-md">
-              <h3 className="text-lg font-semibold mb-2">About Me</h3>
-              <p className="text-sm">
-                I'm always excited to connect with fellow developers, potential
-                clients, and anyone passionate about technology. Whether you
-                have a project in mind or just want to say hello, I'm here to
-                collaborate.
-              </p>
-            </div>
-            <div className="flex space-x-5 mb-6 md:mb-0">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+          {/* About Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+              Oluwasuyi Timilehin
+            </h3>
+            <p className="text-sm leading-relaxed">
+              Frontend developer passionate about creating beautiful, functional
+              websites. Let's connect and build something amazing together.
+            </p>
+            <div className="flex space-x-4">
               <Link
                 to="https://github.com/Oluwasuyi-Timilehin"
                 aria-label="GitHub"
+                className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
-                <FaGithub className="text-xl hover:text-secondary transition-colors duration-300" />
+                <FaGithub className="text-xl" />
               </Link>
               <Link
                 to="https://twitter.com/OluwasuyiOlumi3"
                 aria-label="Twitter"
+                className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
-                <FaTwitter className="text-xl hover:text-secondary transition-colors duration-300" />
+                <FaTwitter className="text-xl" />
               </Link>
               <Link
                 to="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin-b474b629a"
                 aria-label="LinkedIn"
+                className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
-                <FaLinkedin className="text-xl hover:text-secondary transition-colors duration-300" />
+                <FaLinkedin className="text-xl" />
               </Link>
               <Link
                 to="https://www.instagram.com/dxrkfacee/"
                 aria-label="Instagram"
+                className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
               >
-                <FaInstagram className="text-xl hover:text-secondary transition-colors duration-300" />
+                <FaInstagram className="text-xl" />
               </Link>
             </div>
           </div>
-          <div className="flex flex-col lg:space-y-4 mb-10">
-            <h2 className="text-lg font-semibold mb-2">Ouick Links</h2>
-            <div className="flex items-center space-x-20">
-              <div className="flex flex-col space-y-3">
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+              Quick Links
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-2">
                 <ScrollLink
                   to="about"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="cursor-pointer"
+                  className="text-sm text-zinc-600 duration-300 cursor-pointer block hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors "
+                  activeClass="text-emerald-600 dark:text-emerald-500"
                 >
                   About
                 </ScrollLink>
@@ -72,21 +79,23 @@ const Footer = () => {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="cursor-pointer"
+                  className="text-sm text-zinc-600 duration-300 cursor-pointer block hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors "
+                  activeClass="text-emerald-600 dark:text-emerald-500"
                 >
                   Skills
                 </ScrollLink>
               </div>
-              <div className="flex flex-col space-y-3">
+              <div className="space-y-2">
                 <ScrollLink
-                  to="resume"
+                  to="projects"
                   spy={true}
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="cursor-pointer"
+                  className="text-sm text-zinc-600 duration-300 cursor-pointer block hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors "
+                  activeClass="text-emerald-600 dark:text-emerald-500"
                 >
-                  Project
+                  Projects
                 </ScrollLink>
                 <ScrollLink
                   to="contact"
@@ -94,37 +103,42 @@ const Footer = () => {
                   smooth={true}
                   offset={-70}
                   duration={500}
-                  className="cursor-pointer"
-                  onClick={toggleMenu}
+                  className="text-sm text-zinc-600 duration-300 cursor-pointer block hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors "
+                  activeClass="text-emerald-600 dark:text-emerald-500"
                 >
                   Contact
                 </ScrollLink>
               </div>
             </div>
           </div>
-          <div className="mb-10">
-            <div className="flex flex-col p-5 space-y-4 bg-slate-200 dark:bg-slate-700 rounded-md">
-              <h2 className="font-semibold text-slate-500 dark:text-slate-300 text-lg">
-                Get in Touch
-              </h2>
-              <p className="text-sm">
-                Have a project in mind? Let's discuss how we can work together
-                to bring your ideas to life.
-              </p>
-              <Link
-                to="mailto:oluwasuyitimilehin@gmail.com?subject=Contact from Portfolio&body=Hello Timilehin,"
-                className="flex items-center justify-center space-x-2 bg-secondary text-white py-3 px-6"
-              >
-                <MdOutlineMail fontSize={20} />
-                <span className="text-sm">oluwasuyitimilehin@gmail.com</span>
-              </Link>
+
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
+              Get In Touch
+            </h3>
+            <div className="flex items-start gap-3">
+              <FaEnvelope className="text-emerald-600 dark:text-emerald-400 mt-1 flex-shrink-0" />
+              <div>
+                <p className="text-sm">Have a project or question?</p>
+                <Link
+                  to="mailto:oluwasuyitimilehin@gmail.com"
+                  className="text-sm hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                >
+                  oluwasuyitimilehin@gmail.com
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-        <p className="border-t border-gray-300 dark:border-gray-600 py-5 text-sm">
-          &copy; {new Date().getFullYear()} Oluwasuyi Timilehin. All rights
-          reserved.
-        </p>
+
+        {/* Copyright */}
+        <div className="pt-6 border-t border-zinc-200 dark:border-zinc-800">
+          <p className="text-xs text-center text-zinc-500 dark:text-zinc-400">
+            &copy; {new Date().getFullYear()} Oluwasuyi Timilehin. All rights
+            reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );
