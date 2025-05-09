@@ -7,6 +7,13 @@ import { FaGithub } from "react-icons/fa";
 import webImage from "/Images/avater1.png";
 
 const Hero = () => {
+  const scrollToProjects = (e) => {
+    e.preventDefault();
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <section className="bg-white dark:bg-zinc-950 pt-28 pb-20 md:pt-36 md:pb-32 ">
@@ -56,7 +63,7 @@ const Hero = () => {
               </div>
 
               <div className="flex flex-wrap items-center gap-4 pt-2">
-                <a href="#projects">
+                <a href="#projects" onClick={scrollToProjects}>
                   <button className="inline-flex justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-offset-zinc-950">
                     View my work
                   </button>
