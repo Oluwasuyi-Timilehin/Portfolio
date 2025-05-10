@@ -1,6 +1,5 @@
 import Navbar from "../Components/Navbar";
 
-
 const Homepage = () => {
   return (
     <>
