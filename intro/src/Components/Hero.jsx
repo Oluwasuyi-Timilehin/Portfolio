@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import webImage from "/Images/avater1.png";

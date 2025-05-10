@@ -1,5 +1,3 @@
-
-
 const Homecontact = () => {
   return (
     <>

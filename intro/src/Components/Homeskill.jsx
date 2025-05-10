@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaReact, FaHtml5, FaGithub, FaCode } from "react-icons/fa";
 import { DiJavascript } from "react-icons/di";
 import { IoLogoCss3 } from "react-icons/io";

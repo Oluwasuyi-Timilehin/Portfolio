@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink, Element } from "react-scroll";
 import { AiOutlineMenu } from "react-icons/ai";
