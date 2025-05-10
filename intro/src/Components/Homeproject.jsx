@@ -1,4 +1,3 @@
-
 import { LuGithub, LuExternalLink } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import fastImg from "/Images/fastcare.png";
