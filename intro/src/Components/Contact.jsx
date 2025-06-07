@@ -14,6 +14,12 @@ const Contact = () => {
     const formData = Object.fromEntries(new FormData(form.current));
     console.log("Form data:", formData);
 
+    console.log("EmailJS Config:", {
+      service: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      template: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      key: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+    });
+
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
