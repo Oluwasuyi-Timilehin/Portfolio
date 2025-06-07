@@ -1,7 +1,37 @@
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { LuGithub, LuTwitter, LuLinkedin } from "react-icons/lu";
 import { FaEnvelope } from "react-icons/fa";
 
+
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Debug what's being sent
+    const formData = Object.fromEntries(new FormData(form.current));
+    console.log("Form data:", formData);
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then((result) => {
+        console.log(result.text);
+        alert("Sent successfully!");
+        e.target.reset();
+      })
+      .catch((error) => {
+        console.error("Full error:", error);
+        alert(`Failed: ${error.text || error.message}`);
+      });
+  };
+  
   return (
     <section className="bg-white dark:bg-zinc-950 text-primary dark:text-white py-20 md:py-28">
       <div className="container mx-auto px-4 lg:px-8">
@@ -70,7 +100,7 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2 bg-white dark:bg-zinc-900 p-8 rounded-xl shadow-lg border border-none">
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
-            <form className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label
@@ -82,8 +112,10 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
+                    name="user_name"
                     className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-400 transition-all"
                     placeholder="John Doe"
+                    required
                   />
                 </div>
                 <div>
@@ -96,8 +128,10 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
+                    name="user_email"
                     className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-400 transition-all"
                     placeholder="john@example.com"
+                    required
                   />
                 </div>
               </div>
@@ -111,8 +145,10 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
+                  name="subject"
                   className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-emerald-400 transition-all"
                   placeholder="Let me know how I can help you"
+                  required
                 />
               </div>
               <div>
@@ -124,9 +160,11 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows="5"
                   className="w-full px-4 py-3 rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none focus:border-emerald-400 transition-all"
                   placeholder="Hi Timilehin, I'd like to talk about..."
+                  required
                 ></textarea>
               </div>
               <button

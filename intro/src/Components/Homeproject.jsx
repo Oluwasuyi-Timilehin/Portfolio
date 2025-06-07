@@ -36,7 +36,7 @@ const Homeproject = () => {
           <h2 className="text-3xl md:text-4xl font-semibold text-zinc-800 dark:text-white mb-4">
             Featured Projects
           </h2>
-          <div class="w-20 h-1 bg-emerald-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-emerald-600 mx-auto mb-6"></div>
           <p className="text-zinc-600 dark:text-zinc-300 max-w-2xl mx-auto">
             Here are some of my recent projects that showcase my skills and
             development approach.
