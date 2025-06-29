@@ -11,7 +11,7 @@ const Homeproject = () => {
         "A React application that allows users to discover new films effortlessly, featuring search functionality and curated top movie lists.",
       technologies: ["React.js", "Tailwind CSS"],
       githubLink: "https://github.com/Oluwasuyi-Timilehin/Movieapp",
-      liveLink: "https://movieapp-fawn-one.vercel.app/",
+      liveLink: "https://movieapp-ot.vercel.app/",
       image: spiderImg,
       type: "Personal Project",
     },
