@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { FaInstagram } from "react-icons/fa6";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
-import webImage from "/Images/avater1.png";
+import webImage from "/Images/myavater.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -99,7 +99,7 @@ const Hero = () => {
                   className="w-full h-full object-cover rounded-full"
                   src={webImage}
                   style={{
-                    objectPosition: "top center",
+                    objectPosition: "center",
                     transform: "scale(1.0)",
                   }}
                 />
