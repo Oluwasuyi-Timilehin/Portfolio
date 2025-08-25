@@ -88,7 +88,7 @@ const Hero = () => {
                     View my work
                   </button>
                 </a>
-                <a href="/Oluwasuyi OluwatimilehinCV.pdf" download>
+                <a href="/resume.pdf" download>
                   <button className="gap-2 rounded-md text-sm font-medium whitespace-nowrap border border-emerald-600 text-emerald-600 px-4 py-2 hover:bg-emerald-50 hover:text-zinc-600 dark:hover:text-white dark:hover:bg-emerald-950 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:focus:ring-offset-zinc-950">
                     Download cv
                   </button>
