@@ -22,35 +22,45 @@ const Footer = () => {
               Frontend developer passionate about creating beautiful, functional
               websites. Let's connect and build something amazing together.
             </p>
+
+            {/* Social links */}
             <div className="flex space-x-4">
-              <Link
-                to="https://github.com/Oluwasuyi-Timilehin"
+              <a
+                href="https://github.com/Oluwasuyi-Timilehin"
                 aria-label="GitHub"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                target="_blank"
+                  rel="noopener noreferrer"
               >
                 <FaGithub className="text-xl" />
-              </Link>
-              <Link
-                to="https://twitter.com/OluwasuyiOlumi3"
+              </a>
+              <a
+                href="https://x.com/timicodess"
                 aria-label="Twitter"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                target="_blank"
+                  rel="noopener noreferrer"
               >
                 <FaTwitter className="text-xl" />
-              </Link>
-              <Link
-                to="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin-b474b629a"
+              </a>
+              <a
+                href="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin/"
                 aria-label="LinkedIn"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                target="_blank"
+                  rel="noopener noreferrer"
               >
                 <FaLinkedin className="text-xl" />
-              </Link>
-              <Link
-                to="https://www.instagram.com/dxrkfacee/"
+              </a>
+              <a
+                href="https://www.instagram.com/timiturn3r/"
                 aria-label="Instagram"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                target="_blank"
+                  rel="noopener noreferrer"
               >
                 <FaInstagram className="text-xl" />
-              </Link>
+              </a>
             </div>
           </div>
 

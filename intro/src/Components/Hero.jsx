@@ -49,14 +49,18 @@ const Hero = () => {
               {/* Social Links */}
               <div className="flex gap-4 text-xl text-zinc-900 dark:text-zinc-300">
                 <a
-                  href="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin-b474b629a"
+                  href="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin/"
                   className="hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaLinkedin />
                 </a>
                 <a
                   href="https://x.com/timicodess"
                   className="hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaTwitter />
                 </a>
@@ -69,8 +73,10 @@ const Hero = () => {
                   <FaGithub />
                 </a>
                 <a
-                  href="https://www.instagram.com/dxrkfacee/"
+                  href="https://www.instagram.com/timiturn3r/"
                   className="hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <FaInstagram />
                 </a>
