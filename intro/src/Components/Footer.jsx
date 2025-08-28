@@ -35,7 +35,7 @@ const Footer = () => {
                 <FaGithub className="text-xl" />
               </a>
               <a
-                href="https://x.com/timicodess"
+                href="https://x.com/timiturn3r"
                 aria-label="Twitter"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 target="_blank"

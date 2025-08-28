@@ -57,7 +57,7 @@ const Hero = () => {
                   <FaLinkedin />
                 </a>
                 <a
-                  href="https://x.com/timicodess"
+                  href="https://x.com/timiturn3r"
                   className="hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -107,7 +107,7 @@ const Hero = () => {
                   style={{
                     objectPosition: "center",
                     transform: "scale(1.0)",
-                  }}
+                  }} 
                 />
               </div>
               {/* Glow effect behind the image */}
