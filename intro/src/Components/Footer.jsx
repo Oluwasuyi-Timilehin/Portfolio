@@ -30,7 +30,7 @@ const Footer = () => {
                 aria-label="GitHub"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 target="_blank"
-                  rel="noopener noreferrer"
+                rel="noopener noreferrer"
               >
                 <FaGithub className="text-xl" />
               </a>
@@ -39,7 +39,7 @@ const Footer = () => {
                 aria-label="Twitter"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 target="_blank"
-                  rel="noopener noreferrer"
+                rel="noopener noreferrer"
               >
                 <FaTwitter className="text-xl" />
               </a>
@@ -48,7 +48,7 @@ const Footer = () => {
                 aria-label="LinkedIn"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 target="_blank"
-                  rel="noopener noreferrer"
+                rel="noopener noreferrer"
               >
                 <FaLinkedin className="text-xl" />
               </a>
@@ -57,7 +57,7 @@ const Footer = () => {
                 aria-label="Instagram"
                 className="text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 target="_blank"
-                  rel="noopener noreferrer"
+                rel="noopener noreferrer"
               >
                 <FaInstagram className="text-xl" />
               </a>
@@ -69,7 +69,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
               Quick Links
             </h3>
-            <div className="grid grid-cols-2 gap-4">
+            <p className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <ScrollLink
                   to="about"
@@ -118,7 +118,7 @@ const Footer = () => {
                   Contact
                 </ScrollLink>
               </div>
-            </div>
+            </p>
           </div>
 
           {/* Contact Info */}

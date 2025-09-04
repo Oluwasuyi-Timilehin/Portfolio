@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 import { LuGithub, LuTwitter, LuLinkedin } from "react-icons/lu";
 import { FaEnvelope } from "react-icons/fa";
 
-
 const Contact = () => {
   const form = useRef();
 
@@ -37,7 +36,7 @@ const Contact = () => {
         alert(`Failed: ${error.text || error.message}`);
       });
   };
-  
+
   return (
     <section className="bg-white dark:bg-zinc-950 text-primary dark:text-white py-20 md:py-28">
       <div className="container mx-auto px-4 lg:px-8">

@@ -47,7 +47,7 @@ const Hero = () => {
               </p>
 
               {/* Social Links */}
-              <div className="flex gap-4 text-xl text-zinc-900 dark:text-zinc-300">
+              <p className="flex gap-4 text-xl text-zinc-900 dark:text-zinc-300">
                 <a
                   href="https://www.linkedin.com/in/oluwasuyi-oluwatimilehin/"
                   className="hover:text-emerald-600 dark:hover:text-emerald-500 transition-colors"
@@ -80,9 +80,9 @@ const Hero = () => {
                 >
                   <FaInstagram />
                 </a>
-              </div>
+              </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <p className="flex flex-wrap items-center gap-4 pt-2">
                 <a href="#projects" onClick={scrollToProjects}>
                   <button className="inline-flex justify-center gap-2 rounded-md text-sm font-medium whitespace-nowrap bg-emerald-600 px-4 py-2 text-white hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 dark:bg-emerald-600 dark:hover:bg-emerald-700 dark:focus:ring-offset-zinc-950">
                     View my work
@@ -93,7 +93,7 @@ const Hero = () => {
                     Download cv
                   </button>
                 </a>
-              </div>
+              </p>
             </div>
             <div
               className="flex-1 flex justify-center relative"
@@ -107,7 +107,7 @@ const Hero = () => {
                   style={{
                     objectPosition: "center",
                     transform: "scale(1.0)",
-                  }} 
+                  }}
                 />
               </div>
               {/* Glow effect behind the image */}
