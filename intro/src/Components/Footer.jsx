@@ -69,7 +69,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-zinc-900 dark:text-white">
               Quick Links
             </h3>
-            <p className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <ScrollLink
                   to="about"
@@ -118,7 +118,7 @@ const Footer = () => {
                   Contact
                 </ScrollLink>
               </div>
-            </p>
+            </div>
           </div>
 
           {/* Contact Info */}
