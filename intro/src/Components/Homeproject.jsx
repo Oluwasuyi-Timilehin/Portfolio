@@ -1,7 +1,7 @@
 import { LuGithub, LuExternalLink } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import fastImg from "/Images/fastcare.png";
-import spiderImg from "/Images/movieapp.png";
+import spiderImg from "/Images/screenshot.png";
 
 const Homeproject = () => {
   const projects = [
@@ -47,7 +47,7 @@ const Homeproject = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="rounded-lg bg-white h-full overflow-hidden shadow-md transition-shadow hover:shadow-lg dark:zinc-800/50"
+              className="rounded-lg bg-white h-full overflow-hidden shadow-md transition-shadow hover:shadow-lg dark:bg-zinc-800/50"
             >
               <div className="relative h-48 overflow-hidden">
                 <img
