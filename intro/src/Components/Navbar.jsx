@@ -5,7 +5,6 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { FaCode } from "react-icons/fa6";
 import { IoIosClose } from "react-icons/io";
 import { LuMoon, LuSun } from "react-icons/lu";
-import { FiMail } from "react-icons/fi";
 import Homeabout from "./Homeabout";
 import Hero from "./Hero";
 import Homeskill from "./Homeskill";
@@ -87,7 +86,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                className="cursor-pointer text-zinc-600 duration-300 transition-colors hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500"
                 activeClass="text-secondary"
               >
                 Home
@@ -98,7 +97,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                className="cursor-pointer text-zinc-600 duration-300 transition-colors hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500"
                 activeClass="text-secondary"
               >
                 About
@@ -109,7 +108,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                className="cursor-pointer text-zinc-600 duration-300 transition-colors hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500"
                 activeClass="text-secondary"
               >
                 Skills
@@ -120,7 +119,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                className="cursor-pointer text-zinc-600 duration-300 transition-colors hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500"
                 activeClass="text-secondary"
               >
                 Projects
@@ -131,7 +130,7 @@ const Navbar = () => {
                 smooth={true}
                 offset={-70}
                 duration={500}
-                className="cursor-pointer text-zinc-600 duration-300 hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500 transition-colors"
+                className="cursor-pointer text-zinc-600 duration-300 transition-colors hover:text-emerald-600 dark:text-zinc-300 dark:hover:text-emerald-500"
                 activeClass="text-secondary"
               >
                 Contact

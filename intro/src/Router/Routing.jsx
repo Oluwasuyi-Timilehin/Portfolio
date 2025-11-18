@@ -5,8 +5,8 @@ const Routing = () => {
   return (
     <BrowserRouter
       future={{
-        v7_startTransition: true, // Enables startTransition for React 18
-        v7_relativeSplatPath: true, // Enables relative splat paths
+        v7_startTransition: true, // It enables startTransition for React
+        v7_relativeSplatPath: true, // It enables relative splat paths
       }}
     >
       <Routes>
