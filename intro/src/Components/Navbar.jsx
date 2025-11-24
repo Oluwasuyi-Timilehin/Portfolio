@@ -21,7 +21,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setOpen(!open);
-    // Prevent scrolling when menu is open
+    // It prevents scrolling when the mobile menu is open
     document.body.style.overflow = open ? "auto" : "hidden";
   };
 
@@ -29,7 +29,7 @@ const Navbar = () => {
     const newMode = !darkMode;
     setDarkMode(newMode);
     localStorage.setItem("theme", newMode ? "dark" : "light");
-    document.documentElement.classList.toggle("dark", newMode);
+    document.documentElement.classList.toggle("dark", newMode); 
   };
 
   useEffect(() => {
@@ -49,7 +49,7 @@ const Navbar = () => {
     }
   }, [darkMode]);
 
-  // Close mobile menu when clicking a link
+  // Closes the mobile menu when a link is clicked
   const closeMobileMenu = () => {
     setOpen(false);
     document.body.style.overflow = "auto";
