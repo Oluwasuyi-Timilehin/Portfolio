@@ -110,7 +110,7 @@ const Homeproject = () => {
             to="https://github.com/Oluwasuyi-Timilehin"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 hover:text-white dark:hover:bg-emerald-600 dark:hover:text-white h-10 rounded-md px-6 py-2"
+            className="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-emerald-600 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-600 rounded-md hover:text-white dark:hover:bg-emerald-600 dark:hover:text-white h-10 px-6 py-2"
           >
             View All Projects
           </Link>
