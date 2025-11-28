@@ -57,7 +57,7 @@ const Homeskill = () => {
               const targetWidth = bar.getAttribute("data-level");
               bar.style.width = "0%";
 
-              // Trigger reflow
+              // Triger reflow to restart the animation
               void bar.offsetWidth;
 
               // Animate to target width
